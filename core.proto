@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package core;
+
+service Core {
+    rpc AddXp(AddXpRequest) returns (LevelUpResponse) {}
+}
+
+message AddXpRequest {
+    uint64 user_id = 1;
+    uint64 guild_id = 2;
+}
+
+message LevelInfo {
+    bool up = 1;
+    uint32 level = 2;
+    bool add = 3;
+}
+
+message LevelUpResponse {
+    LevelInfo global = 1;
+    LevelInfo guild = 2;
+}
