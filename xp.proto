@@ -13,7 +13,7 @@ message User {
 
 message LevelInfo {
     bool up = 1;
-    uint32 level = 2;
+    int32 level = 2;
     bool add = 3;
 }
 
